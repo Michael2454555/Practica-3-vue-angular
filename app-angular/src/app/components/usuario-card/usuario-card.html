@@ -1,0 +1,19 @@
+<article class="tarjeta" [class.favorito]="esFavorito"> 
+  <h2>{{ usuario?.name }}</h2>
+  <p>{{ usuario?.email }}</p>
+  <p>{{ usuario?.address?.city }}</p>
+
+  <button class="btn-fav" (click)="clickFavorito()">
+    {{ esFavorito ? '★ Quitar Favorito' : '☆ Favorito' }}
+  </button>
+  <button (click)="alternarExtra()">
+    {{ mostrarExtra ? 'Ver menos' : 'Ver más' }}
+  </button>
+
+  @if (mostrarExtra) {
+    <div class="info-extra">
+      <p><strong>Telefono:</strong> {{ usuario?.phone }}</p>
+      <p><strong>Empresa:</strong> {{ usuario?.company?.name }}</p>
+    </div>
+  }
+</article>

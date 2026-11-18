@@ -1,0 +1,32 @@
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+.controles {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.controles input[type="text"] {
+  padding: 8px;
+  width: 240px;
+}
+.contador {
+  font-weight: bold;
+  background: #eee;
+  color: #222;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 15px;
+}
+.error {
+  color: red;
+  font-weight: bold;
+}
